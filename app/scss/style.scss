@@ -1,0 +1,178 @@
+@import "bootstrap";
+body{
+  @include size(100%);
+  font-size: 16px;
+}
+button{
+   outline: none !important;
+ }
+#baner{
+  background: #20c997 ;
+  background-size: cover;
+  color: white;
+  height: 405px;
+  text-align: center;
+}
+
+#search{
+
+  position: absolute;
+  top: 225px;
+  width: 100%;
+  transition: width 3s;
+  .search-icon{
+    background: #fff;
+    border: none;
+    border-top-left-radius:50% ;
+    border-bottom-left-radius: 50%;
+  }
+  .search-text{
+    background: #fff;
+    border: none;
+    border-top-right-radius:35px ;
+    border-bottom-right-radius: 35px;
+  }
+  input{
+    border: none;
+  }
+}
+
+.qa{
+  color: white;
+  background: red;
+  height: 65px;
+  font-size: 32px;
+  line-height: 65px;
+  border-radius: 8px;
+  position: absolute;
+  top: -32px;
+}
+#menu{
+  font-size: 18px;
+  a{
+    color: #1d2124;
+  }
+  button{
+    outline: none;
+  }
+  ul{
+    width: 100%;
+  }
+  .hu{
+    transition: font-size 0.3ms, color 0.3s;
+  }
+  .hu:hover{
+    font-size: 20px;
+    color: #dc3545;
+  }
+}
+
+.bt-more{
+  width: 100%;
+  position: absolute;
+  bottom: -1.2rem;
+  button{
+    border-radius: 1.5rem;
+  }
+}
+#main{
+  padding: 5rem 0;
+}
+.list-cmt{
+  img{
+    @include size(50px)
+  }
+  button{
+    border-radius: 1.5rem;
+    font-size: 12px;
+  }
+}
+.comment-user{
+  a{
+    color: #6610f2;
+  }
+}
+.subject-cmt{
+  width: 5rem;
+}
+.answered{
+  img{
+    @include size(25px)
+  }
+  button{
+    @include size(35px)
+  }
+}
+#top-member{
+  img{
+    box-shadow: 0 0 0 4px #6c757d;
+    @include size(50px);
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+  }
+  img:hover{
+    box-shadow: 0 0 0 8px #6c757d;
+  }
+  .act{
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 0 4px #dc3545;
+  }
+  .act:hover{
+    box-shadow: 0 0 0 8px #dc3545;
+  }
+
+}
+
+.bt-ask{
+  width: 50%;
+  font-size: 16px;
+}
+.ask{
+  font-size: 20px;
+}
+.load-more{
+  button{
+    border-radius: 1.5rem;
+  }
+}
+.bg-info{
+  background:  #6ad0f2;
+}
+@include media-breakpoint-down(md){
+  #sign{
+    button{
+      width: 100%;
+      border-color: #dc3545;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end
+    }
+  }
+  #navbar-menu{
+    ul{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap
+    }
+  }
+  .ask{
+    display: none !important;
+  }
+  .ask-fix{
+    position: fixed;
+    top: 90%;
+    right: 0;
+  }
+  .footer{
+    display: flex;
+    //justify-content: center;
+  }
+  .info{
+    order: 2;
+  }
+  .mxh{
+    order: 1;
+  text-align: left !important;
+  }
+}
+
