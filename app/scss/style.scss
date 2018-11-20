@@ -136,6 +136,11 @@ button{
 .bg-info{
   background:  #6ad0f2;
 }
+@include media-breakpoint-down(sm){
+  .answer{
+    display: none;
+  }
+}
 @include media-breakpoint-down(md){
   #sign{
     position: fixed;
