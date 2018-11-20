@@ -12,13 +12,19 @@
 <body>
 <div class="container">
     <nav class="navbar navbar-expand-lg justify-content-between">
+        <button class="navbar-toggler mb-2" type="button" data-toggle="collapse" data-target="#sign,#navbar-menu" aria-controls="sign" aria-expanded="false" aria-label="Toggle navigation" >
+            <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+        </button>
+        <!--<button class="navbar-toggler hu" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">-->
+            <!--<div class="text-center mb-3"><i class="fas fa-th "></i></div>-->
+            <!--<div><span>All subject</span></div>-->
+        <!--</button>-->
+        <div class="collapse navbar-collapse justify-content-center" id="navbar-menu">
+        </div>
         <div class="mr-2">
             <img src="img/logo.png" alt="logo">
         </div>
         <form class="form-inline my-2 my-lg-0 justify-content-end ">
-            <button class="navbar-toggler mb-2" type="button" data-toggle="collapse" data-target="#sign" aria-controls="sign" aria-expanded="false" aria-label="Toggle navigation" >
-                <span><i class="far fa-user"></i></span>
-            </button>
             <div class="collapse navbar-collapse mr-auto  justify-content-end col-6 p-0" id="sign">
                 <button class="sign-in btn btn-outline-light text-black-50 mb-2 border-0" type="submit">Sign in</button>
                 <button class="sign-up btn btn-outline-light text-black-50 mb-2 border-0" type="submit">Sign up</button>
@@ -38,8 +44,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-lg-offset-2 col-md-6 col-sm-6 position-relative d-flex flex-lg-row justify-content-center    ">
-                    <div id="search">
-                        <div class="input-group  input-group-lg ">
+                        <div id="search" class=" input-group input-group-lg ">
                             <div class="input-group-prepend ">
                                 <button type="button" class="input-group-text search-icon"><i class="fas fa-search"></i></button>
                             </div>
@@ -48,7 +53,6 @@
                                 <span class="input-group-text search-text ">Search</span>
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -61,11 +65,7 @@
                         <span>1000 + Questions answers</span>
                     </div>
                     <nav class="navbar navbar-expand-lg justify-content-center pb-4">
-                        <button class="navbar-toggler hu" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <div class="text-center mb-3"><i class="fas fa-th "></i></div>
-                            <div><span>All subject</span></div>
-                        </button>
-                        <div class="collapse navbar-collapse justify-content-center" id="navbar-menu">
+                        <div class=" justify-content-center" >
                             <ul class="navbar-nav justify-content-between  pb-5">
                                 <li class="nav-item text-center">
                                     <a href="" class="nav-link">
@@ -120,12 +120,64 @@
                     </nav>
 
                     <div class="bt-more text-center">
-                        <button type="submit" class="btn btn-outline-danger text-danger pt-2 pb-2 pl-5 pr-5 bg-white">Show more subject</button>
+                        <button type="submit" class="btn btn-outline-danger  pt-2 pb-2 pl-5 pr-5 bg-white">Show more subject</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+<div class="dropdown">
+    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Dropdown link
+    </a>
+
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+</div>
+<!--<div class="btn-group dropright">-->
+    <!--<div class="btn-group dropright">-->
+        <!--<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+            <!--Dropright-->
+        <!--</button>-->
+        <!--<div class="dropdown-menu">-->
+            <!--<a href="" class="nav-link">-->
+                <!--<div class="text-center mb-3"><i class="fas fa-square-root-alt hu"></i></div>-->
+                <!--<div><span>Mathematics</span></div>-->
+            <!--</a>-->
+            <!--<a href="" class="nav-link">-->
+                <!--<div class="text-center mb-3"><i class="fas fa-magnet hu"></i></div>-->
+                <!--<div><span>Phisic</span></div>-->
+            <!--</a>-->
+            <!--<a href="" class="nav-link">-->
+                <!--<div class="text-center mb-3"><i class="fas fa-brain hu"></i></div>-->
+                <!--<div><span>Biologi</span></div>-->
+            <!--</a>-->
+            <!--<a href="" class="nav-link">-->
+                <!--<div class="text-center mb-3"><i class="fas fa-flask hu"></i></div>-->
+                <!--<div><span>Chemistry</span></div>-->
+            <!--</a>-->
+            <!--<a href="" class="nav-link">-->
+                <!--<div class="text-center mb-3"><i class="fas fa-scroll hu"></i></div>-->
+                <!--<div><span>History</span></div>-->
+            <!--</a>-->
+            <!--<a href="" class="nav-link">-->
+                <!--<div class="text-center mb-3"><i class="far fa-comments hu"></i></div>-->
+                <!--<div><span>English</span></div>-->
+            <!--</a>-->
+            <!--<a href="" class="nav-link">-->
+                <!--<div class="text-center mb-3"><i class="fas fa-globe-americas hu"></i></div>-->
+                <!--<div><span>Geagraphy</span></div>-->
+            <!--</a>-->
+            <!--<a href="" class="nav-link">-->
+                <!--<div class="text-center mb-3"><i class="fas fa-book hu"></i></div>-->
+                <!--<div><span>Literature</span></div>-->
+            <!--</a>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
     <section class="mb-5">
         <div class="container">
             <div id="main">

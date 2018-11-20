@@ -1,11 +1,15 @@
 @import "bootstrap";
 body{
   @include size(100%);
-  font-size: 16px;
+  font-size: 16px;padding-top: 50px;
 }
-button{
+button,input{
    outline: none !important;
  }
+a{
+  text-decoration: none !important;
+}
+
 #baner{
   background: #20c997 ;
   background-size: cover;
@@ -13,13 +17,19 @@ button{
   height: 405px;
   text-align: center;
 }
-
+.top{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #f8f9fa;
+  z-index: 100000;
+}
 #search{
-
   position: absolute;
   top: 225px;
   width: 100%;
-  transition: width 3s;
+  border-radius: 35px;
   .search-icon{
     background: #fff;
     border: none;
@@ -36,7 +46,10 @@ button{
     border: none;
   }
 }
-
+#search:hover{
+  border-color:#007bff;
+  box-shadow: 0 0 0 0.5rem rgba(0, 123, 255, 0.25);
+}
 .qa{
   color: white;
   background: red;
@@ -47,7 +60,7 @@ button{
   position: absolute;
   top: -32px;
 }
-#menu{
+#menu,.menu{
   font-size: 18px;
   a{
     color: #1d2124;
@@ -73,6 +86,10 @@ button{
   bottom: -1.2rem;
   button{
     border-radius: 1.5rem;
+  }
+  button:hover{
+    background: #dc3545 !important;
+    color: #f8f9fa;
   }
 }
 #main{
@@ -137,23 +154,73 @@ button{
   background:  #6ad0f2;
 }
 @include media-breakpoint-down(sm){
-  .answer{
+  .answer,.search{
     display: none;
+  }
+  .search-coll{
+
+  }
+  .search__icon {
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 1rem !important;
+    text-align: center;
+    border-color: transparent;
+    border-radius: 50%;
+    pointer-events: none;
+    display: inline-block;
+    background: transparent;
+  }
+  .search__field{
+    border-bottom: 1px solid #1d2124 !important;
+  }
+  .search__wrapper{
+    border: none!important;
+  border-radius: 0 !important;
+
+    box-shadow: none !important;
   }
 }
 @include media-breakpoint-down(md){
-  #sign{
+  .offcanvas-collapse {
     position: fixed;
-    top: 3rem;
-    right: 20%;
+    top: 56px;
+    bottom: 0;
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    overflow-y: auto;
+    background-color: var(--light);
+    transition: transform .3s ease-in-out;
+    transform: translateX(100%);
+    z-index: 1000;
+  }
+  .subject{
+    display: none;
+  }
+  .offcanvas-collapse.open {
+    transform: translateX(30%);
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: -80px;
+    left: 90px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 100000;
+  }
+  .dropright:hover .dropdown-content {
+    display: block;
+  }
+  #sign{
     button{
       border: none;
       border-radius: 35px;
       color: #f8f9fa !important;
       width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
+      text-align: center !important;
     }
     .sign-in{
       background: #007bff;
@@ -182,6 +249,30 @@ button{
       flex-wrap: wrap
     }
   }
+  .search__wrapper{
+    border:  1px solid #1d2124;
+    border-radius: 35px;
+  }
+  .search__field {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+   .search__wrapper:hover{
+    border-color:#007bff;
+     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  .search__icon {
+    @include size(50px);
+    font-size: 1.35em;
+    text-align: center;
+    border-color: transparent;
+    border-radius: 50%;
+    pointer-events: none;
+    display: inline-block;
+  }
   .ask{
     display: none !important;
   }
@@ -189,6 +280,12 @@ button{
     position: fixed;
     top: 90%;
     right: 0;
+    button{
+      border-top-left-radius:35px ;
+      border-bottom-left-radius: 35px;
+    }
+
+
   }
   .footer{
     display: flex;
@@ -202,47 +299,6 @@ button{
   text-align: left !important;
   }
 }
-.search {
-  position: fixed;
-  right:-2%;
-  top: 80%;
-  z-index: 1;
-  transform: translateX(-50%) translateY(-50%);
-}
-.search__field {
-  @include size(50px);
-  background-color: transparent;
-  border: none;
-  border-radius: 35px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-.search__field:focus {
-  background:rgba(0,0,0,0.5) ;
-  width: 55vw;
-  color: #f8f9fa;
-  cursor: default;
-  box-shadow: none;
-  border: none;
-}
-.search__field:focus ~ .search__icon {
-  background-color: transparent;
-  cursor: pointer;
-  pointer-events: auto;
-}
-.search__icon {
-  @include size(50px);
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: #fff;
-  font-size: 1.35em;
-  text-align: center;
-  border-color: transparent;
-  border-radius: 50%;
-  pointer-events: none;
-  display: inline-block;
-  transition: background-color 0.2s ease-in-out;
-}
+
 
 
