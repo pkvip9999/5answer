@@ -10,36 +10,113 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 <body>
-<div class="container">
-    <nav class="navbar navbar-expand-lg justify-content-between">
-        <button class="navbar-toggler mb-2" type="button" data-toggle="collapse" data-target="#sign,#navbar-menu" aria-controls="sign" aria-expanded="false" aria-label="Toggle navigation" >
-            <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-        </button>
-        <!--<button class="navbar-toggler hu" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">-->
-            <!--<div class="text-center mb-3"><i class="fas fa-th "></i></div>-->
-            <!--<div><span>All subject</span></div>-->
-        <!--</button>-->
-        <div class="collapse navbar-collapse justify-content-center" id="navbar-menu">
-        </div>
-        <div class="mr-2">
-            <img src="img/logo.png" alt="logo">
+
+
+<nav class="navbar navbar-expand-lg top p-0">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <div class="mr-2">
+                <img src="img/logo.png" alt="logo">
+            </div>
+        </a>
+        <form class="search d-lg-none ">
+            <div class="search__wrapper position-relative input-group">
+                <input type="text" name="" placeholder="Search for..." class="search__field pl-3">
+                <button type="submit" class="search__icon input-group-append">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </form>
+        <div class="navbar-collapse offcanvas-collapse d-lg-none pt-4 ">
+            <ul class="navbar-nav mr-auto d-lg-none">
+                <li class=" p-0">
+                    <form class="search-coll d-lg-none d-md-none">
+                        <div class="search__wrapper position-relative input-group">
+                            <input type="text" name="" placeholder="Search for..." class="search__field">
+                            <button type="submit" class="search__icon input-group-append ">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Trang chủ <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropright">
+                    <a class="nav-link dropdown-toggle " href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Subject</a>
+                    <div class="dropdown-content">
+                        <ul class="navbar-nav pb-5 d-md-flex flex-wrap menu">
+                            <li class="nav-item text-center">
+                                <a href="" class="nav-link">
+                                    <div class="text-center mb-3"><i class="fas fa-square-root-alt hu"></i></div>
+                                    <div><span>Mathematics</span></div>
+                                </a>
+                            </li>
+                            <li class="nav-item text-center">
+                                <a href="" class="nav-link">
+                                    <div class="text-center mb-3"><i class="fas fa-magnet hu"></i></div>
+                                    <div><span>Phisic</span></div>
+                                </a>
+                            </li>
+                            <li class="nav-item text-center">
+                                <a href="" class="nav-link">
+                                    <div class="text-center mb-3"><i class="fas fa-brain hu"></i></div>
+                                    <div><span>Biologi</span></div>
+                                </a>
+                            </li>
+                            <li class="nav-item text-center">
+                                <a href="" class="nav-link">
+                                    <div class="text-center mb-3"><i class="fas fa-flask hu"></i></div>
+                                    <div><span>Chemistry</span></div>
+                                </a>
+                            </li>
+                            <li class="nav-item text-center">
+                                <a href="" class="nav-link">
+                                    <div class="text-center mb-3"><i class="fas fa-scroll hu"></i></div>
+                                    <div><span>History</span></div>
+                                </a>
+                            </li>
+                            <li class="nav-item text-center">
+                                <a href="" class="nav-link">
+                                    <div class="text-center mb-3"><i class="far fa-comments hu"></i></div>
+                                    <div><span>English</span></div>
+                                </a>
+                            </li>
+                            <li class="nav-item text-center">
+                                <a href="" class="nav-link">
+                                    <div class="text-center mb-3"><i class="fas fa-globe-americas hu"></i></div>
+                                    <div><span>Geagraphy</span></div>
+                                </a>
+                            </li>
+                            <li class="nav-item text-center">
+                                <a href="" class="nav-link">
+                                    <div class="text-center mb-3"><i class="fas fa-book hu"></i></div>
+                                    <div><span>Literature</span></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li id="sign" class="nav-item col-6  ">
+                    <button class="sign-in btn  text-black-50 mb-2 border-0 " type="submit"><span class="m-auto">Sign in</span></button>
+                    <button class="sign-up btn  text-black-50 mb-2 border-0" type="submit"><span>Sign up</span></button>
+                </li>
+            </ul>
         </div>
         <form class="form-inline my-2 my-lg-0 justify-content-end ">
-            <div class="collapse navbar-collapse mr-auto  justify-content-end col-6 p-0" id="sign">
+            <div class="collapse navbar-collapse mr-auto  justify-content-end6 p-0" >
                 <button class="sign-in btn btn-outline-light text-black-50 mb-2 border-0" type="submit">Sign in</button>
                 <button class="sign-up btn btn-outline-light text-black-50 mb-2 border-0" type="submit">Sign up</button>
             </div>
         </form>
-    </nav>
-</div>
-<form class="search d-lg-none ">
-    <div class="search__wrapper position-relative">
-        <input type="text" name="" placeholder="Search for..." class="search__field pl-3">
-        <button type="submit" class="search__icon">
-            <i class="fas fa-search"></i>
+        <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+            <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
         </button>
-    </div>
-</form>
+        </div>
+    </nav>
+
+
     <section id="baner">
         <div class="container">
             <div class="row justify-content-center">
@@ -64,8 +141,8 @@
                     <div class="qa col-12 text-center">
                         <span>1000 + Questions answers</span>
                     </div>
-                    <nav class="navbar navbar-expand-lg justify-content-center pb-4">
-                        <div class=" justify-content-center" >
+                    <nav class=" navbar navbar-expand-lg justify-content-center pb-4">
+                        <div class="subject justify-content-center" >
                             <ul class="navbar-nav justify-content-between  pb-5">
                                 <li class="nav-item text-center">
                                     <a href="" class="nav-link">
@@ -126,58 +203,7 @@
             </div>
         </div>
     </section>
-<div class="dropdown">
-    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Dropdown link
-    </a>
 
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-    </div>
-</div>
-<!--<div class="btn-group dropright">-->
-    <!--<div class="btn-group dropright">-->
-        <!--<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-            <!--Dropright-->
-        <!--</button>-->
-        <!--<div class="dropdown-menu">-->
-            <!--<a href="" class="nav-link">-->
-                <!--<div class="text-center mb-3"><i class="fas fa-square-root-alt hu"></i></div>-->
-                <!--<div><span>Mathematics</span></div>-->
-            <!--</a>-->
-            <!--<a href="" class="nav-link">-->
-                <!--<div class="text-center mb-3"><i class="fas fa-magnet hu"></i></div>-->
-                <!--<div><span>Phisic</span></div>-->
-            <!--</a>-->
-            <!--<a href="" class="nav-link">-->
-                <!--<div class="text-center mb-3"><i class="fas fa-brain hu"></i></div>-->
-                <!--<div><span>Biologi</span></div>-->
-            <!--</a>-->
-            <!--<a href="" class="nav-link">-->
-                <!--<div class="text-center mb-3"><i class="fas fa-flask hu"></i></div>-->
-                <!--<div><span>Chemistry</span></div>-->
-            <!--</a>-->
-            <!--<a href="" class="nav-link">-->
-                <!--<div class="text-center mb-3"><i class="fas fa-scroll hu"></i></div>-->
-                <!--<div><span>History</span></div>-->
-            <!--</a>-->
-            <!--<a href="" class="nav-link">-->
-                <!--<div class="text-center mb-3"><i class="far fa-comments hu"></i></div>-->
-                <!--<div><span>English</span></div>-->
-            <!--</a>-->
-            <!--<a href="" class="nav-link">-->
-                <!--<div class="text-center mb-3"><i class="fas fa-globe-americas hu"></i></div>-->
-                <!--<div><span>Geagraphy</span></div>-->
-            <!--</a>-->
-            <!--<a href="" class="nav-link">-->
-                <!--<div class="text-center mb-3"><i class="fas fa-book hu"></i></div>-->
-                <!--<div><span>Literature</span></div>-->
-            <!--</a>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->
     <section class="mb-5">
         <div class="container">
             <div id="main">
@@ -446,9 +472,9 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="ask p-3 d-flex flex-lg-row justify-content-sm-between">
-                            <h6>
-                                <span>Have a questions ?</span>
+                        <div class="ask p-3 d-flex flex-lg-row justify-content-sm-between ">
+                            <h6 class="mt-2">
+                                Have a questions ?
                             </h6>
                             <div class="bt-ask">
                                 <button type="submit" class="btn btn-danger btn-block">Ask Now</button>
