@@ -5184,12 +5184,24 @@ button {
   background: #6ad0f2; }
 
 @media (max-width: 991.98px) {
-  #sign button {
-    width: 100%;
-    border-color: #dc3545;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end; }
+  #sign {
+    position: fixed;
+    top: 3rem;
+    right: 20%; }
+    #sign button {
+      border: none;
+      border-radius: 35px;
+      color: #f8f9fa !important;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end; }
+    #sign .sign-in {
+      background: #007bff; }
+    #sign .sign-up {
+      background: #dc3545; }
+  .sign {
+    width: 40%; }
   #search {
     display: none; }
   #navbar-menu ul {
@@ -5229,10 +5241,11 @@ button {
 
 .search__field:focus {
   background: rgba(0, 0, 0, 0.5);
-  border-bottom-color: #ccc;
   width: 55vw;
   color: #f8f9fa;
-  cursor: default; }
+  cursor: default;
+  box-shadow: none;
+  border: none; }
 
 .search__field:focus ~ .search__icon {
   background-color: transparent;
