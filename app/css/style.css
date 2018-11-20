@@ -5190,6 +5190,8 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: flex-end; }
+  #search {
+    display: none; }
   #navbar-menu ul {
     display: flex;
     flex-direction: row;
@@ -5208,3 +5210,46 @@ button {
   .mxh {
     order: 1;
     text-align: left !important; } }
+
+.search {
+  position: fixed;
+  right: -2%;
+  top: 80%;
+  z-index: 1;
+  transform: translateX(-50%) translateY(-50%); }
+
+.search__field {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  border-radius: 35px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; }
+
+.search__field:focus {
+  background: rgba(0, 0, 0, 0.5);
+  border-bottom-color: #ccc;
+  width: 55vw;
+  color: #f8f9fa;
+  cursor: default; }
+
+.search__field:focus ~ .search__icon {
+  background-color: transparent;
+  cursor: pointer;
+  pointer-events: auto; }
+
+.search__icon {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  font-size: 1.35em;
+  text-align: center;
+  border-color: transparent;
+  border-radius: 50%;
+  pointer-events: none;
+  display: inline-block;
+  transition: background-color 0.2s ease-in-out; }
